@@ -10,7 +10,7 @@ It contains two elements
    
 2. Apache Spark
    - Spark streaming subscribes to Kafka Producer topic and processes the log data to find out if there was a DDOS attack.
-   - This program takes three parameters duration for which log to process, count of requests to be considered for flagging
+   - This program takes three parameters duration for which log to process, count of requests to be considered for flagging and 
      duration to sleep during stream processing.
      
 This project has been written using IntelliJ and gradle, would recommend executing through IDE rather than command line. 
