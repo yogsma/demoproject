@@ -54,7 +54,7 @@ public class KafkaFileProducer
         }
 
         logger.info("Completed processing log file. Closing the producer....");
-        
+
         kafkaProducer.close();
 
     }

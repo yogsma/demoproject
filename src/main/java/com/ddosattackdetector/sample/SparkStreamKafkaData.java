@@ -38,6 +38,11 @@ public class SparkStreamKafkaData
             duration = 5000;
         }
 
+        if(sleepDuration < 10000)
+        {
+            sleepDuration = 20000;
+        }
+
         SparkConf sparkConf = new SparkConf().setAppName("DetectDDOSAttack").setMaster("local[*]");
         JavaSparkContext jsc = new JavaSparkContext(sparkConf);
         JavaStreamingContext jscx = new JavaStreamingContext(jsc, new Duration(duration));
