@@ -1,4 +1,4 @@
-# demoproject
+# DDOS Attack Detector - Demo Project
 
 This is a sample project to ddos attack based on apache access log.
 
