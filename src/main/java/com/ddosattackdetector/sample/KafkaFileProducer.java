@@ -12,17 +12,17 @@ import java.util.Properties;
 
 public class KafkaFileProducer
 {
-    //private static final Logger logger = LoggerFactory.getLogger(KafkaFileProducer.class);
+    private static final Logger logger = LoggerFactory.getLogger(KafkaFileProducer.class);
     public static void main(String[] args)
     {
-        //logger.info("Starting to read the file...");
+        logger.info("Starting to read the file...");
         final String fileName = "apache-access-log.txt";
         final String directory = args[0];
         if(directory == null || directory.isEmpty())
         {
             throw new RuntimeException("No source directory was passed");
         }
-        //logger.info("Directory of the file is {}", directory);
+        logger.info("Directory of the file is {}", directory);
         String topicName = "detectDDOS";
 
         final KafkaProducer<String, String> kafkaProducer;
@@ -53,6 +53,8 @@ public class KafkaFileProducer
             throw new RuntimeException("File not found or not able to open");
         }
 
+        logger.info("Completed processing log file. Closing the producer....");
+        
         kafkaProducer.close();
 
     }
