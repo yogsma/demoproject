@@ -38,7 +38,7 @@ public class SparkStreamKafkaData
             duration = 5000;
         }
 
-        if(sleepDuration < 10000)
+        if(sleepDuration < 20000)
         {
             sleepDuration = 20000;
         }
